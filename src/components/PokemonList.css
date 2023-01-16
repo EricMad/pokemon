@@ -1,0 +1,27 @@
+.pokemons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px 100px 30px 100px;
+  gap: 10px;
+}
+
+.pokemon-img {
+  width: 150px;
+  height: 150px;
+}
+.pokemon-container {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  backdrop-filter: blur(8px);
+}
+.pokemon-container p {
+  width: 100px;
+  color: white;
+  font-weight: bold;
+}
