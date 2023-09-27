@@ -30,6 +30,7 @@
   color: white;
   font-size: 3rem;
   margin: 20px;
+  text-transform: uppercase;
 }
 .pokemon-card-img {
   align-items: center;

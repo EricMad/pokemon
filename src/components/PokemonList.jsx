@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 function PokemonList() {
   const [pokemons, setPokemons] = useState([]);
+  const [rangeValue, setRangeValue] = useState(20);
+  const [pokeNames, setPokeNames] = useState([]);
 
   useEffect(() => {
     axios
@@ -14,14 +16,26 @@ function PokemonList() {
   }, []);
 
   return (
-    <div className="pokemons-container">
-      {pokemons.map((pokemon) => (
-        <div className="pokemon-container">
-          <Link to={`/pokemon/${pokemon.id}`}>
-            <img className="pokemon-img" src={pokemon.image} alt="" />
-          </Link>
-        </div>
-      ))}
+    <div className="container">
+      <form action="" className="poke-form">
+        <input
+          className="poke-form-input"
+          type="range"
+          min="1"
+          max="1000"
+          defaultValue={rangeValue}
+          onChange={(e) => setRangeValue(e.target.value)}
+        />
+      </form>
+      <div className="pokemons-container">
+        {pokemons.slice(0, rangeValue).map((pokemon) => (
+          <div className="pokemon-container">
+            <Link to={`/pokemon/${pokemon.id}`}>
+              <img className="pokemon-img" src={pokemon.image} alt="" />
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,3 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.poke-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poke-form-input {
+  padding: 30px;
+  margin: 0 20px;
+}
+.poke-form-select {
+  padding: 10px;
+  font-size: 20px;
+}
+
 .pokemons-container {
   display: flex;
   justify-content: center;
